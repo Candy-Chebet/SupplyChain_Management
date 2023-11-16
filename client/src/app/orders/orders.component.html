@@ -32,7 +32,7 @@
                         <td (click)="populateForm(ord)"> {{ord.product}}</td>
                         <td (click)="populateForm(ord)"> {{ord.quantity}}</td>
                         <td (click)="populateForm(ord)"> {{ord.totalPrice}}</td>
-    <td (click)="showCoordinates(ord.address)"><a href="javascript:void(0)">{{ord.address}}</a></td>
+                        <td (click)="populateForm(ord)">{{ord.address}}</td>
                         <td (click)="populateForm(ord)"> {{ord.orderStatus}}</td>
                         <td (click)="populateForm(ord)"> {{ord.paymentStatus}}</td>
                         <td>
@@ -41,9 +41,9 @@
                     </tr>
                 </tbody>
             </table>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD69wnDPcyKclEzb0NwxFZLzdckNhP_ULE&libraries=places"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFaXNvUSNlqQoqlNBgCgppWcSeYxb5kDM"></script> -->
 
-            <div>
+            <!-- <div>
                 <label>Enter address</label>
                 <input
                   type="text"
@@ -63,7 +63,7 @@
                 [options]="options">
                 </google-map>
               </div>
-              
+               -->
         </div>
     </div>
 </div>

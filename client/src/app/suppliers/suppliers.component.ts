@@ -15,7 +15,29 @@ export class SuppliersComponent implements OnInit {
  
   ngOnInit(): void {
     this.service.fetchSupplierList();
+    const storedMarkerPositions = localStorage.getItem('markerPositions');
+    if (storedMarkerPositions) {
+      this.markerPositions = JSON.parse(storedMarkerPositions);
+    }
+    
   }
+  display: any;
+  center: google.maps.LatLngLiteral = {
+      lat: 40.7128,
+      lng: -74.0060
+  };
+  zoom = 4;
+  markerOptions: google.maps.MarkerOptions = {
+    draggable: false
+};
+markerPositions: google.maps.LatLngLiteral[] = [];
+addMarker(event: google.maps.MapMouseEvent) {
+    if (event.latLng != null){
+      this.markerPositions.push(event.latLng.toJSON());
+    localStorage.setItem('markerPositions', JSON.stringify(this.markerPositions));
+    }
+    
+}
   
   populateForm(selectedRecord: Supplier) {
     this.service.supplierForm.setValue({
@@ -38,3 +60,4 @@ export class SuppliersComponent implements OnInit {
     }
   }
 }
+

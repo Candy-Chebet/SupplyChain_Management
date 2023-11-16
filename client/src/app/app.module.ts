@@ -24,8 +24,6 @@ import { OrderService } from 'src/app/shared/order.service';
 import { InventoryService } from 'src/app/shared/inventory.service';
 import { GeocodingService } from 'src/app/geocoding.service';
 import { GoogleMapsModule } from '@angular/google-maps'
-
-
 import { RouterModule } from '@angular/router';
 
 
@@ -45,7 +43,6 @@ import { RouterModule } from '@angular/router';
     InventoryFormComponent,
     HeaderComponent,
     HomeComponent,
-   
   ],
   imports: [
     BrowserModule,
