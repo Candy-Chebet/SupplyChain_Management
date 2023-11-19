@@ -16,7 +16,7 @@ export class ProductService {
 
   constructor( private fb: FormBuilder, private http: HttpClient) { }
   
-  readonly baseURL = 'http://localhost:3000/api/products/';
+  readonly baseURL = 'https://store-management-system-aqa7.onrender.com/api/products/';
   list: Product[] = [];
 
     productForm = this.fb.group({

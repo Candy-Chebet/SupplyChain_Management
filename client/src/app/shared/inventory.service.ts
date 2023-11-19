@@ -11,7 +11,7 @@ export class InventoryService {
 
   constructor(private fb:FormBuilder, private http: HttpClient) { }
   
-  readonly baseURL = 'http://localhost:3000/api/inventories/';
+  readonly baseURL = 'https://store-management-system-aqa7.onrender.com/api/inventories/';
   list: Inventory[] = [];
 
     inventoryForm = this.fb.group({
